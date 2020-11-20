@@ -1,0 +1,35 @@
+INDEX VERSION 1.126
+D:\javaEEworkSpace\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\3819497002.index
+\TestInscripStagiaire\src
+D:\javaEEworkSpace\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\200511472.index
+\InscriptionStagiaire\src
+D:\javaEEworkSpace\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\1685699539.index
+\projet ben\src
+D:\javaEEworkSpace\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\3368442607.index
+\TestInscripStagiaire\src
+D:\javaEEworkSpace\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\2623254198.index
+\LoginProjet\src
+D:\javaEEworkSpace\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\2607909405.index
+\TestProject\src
+D:\javaEEworkSpace\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\1084095565.index
+\Espace Stagiaire\src
+D:\javaEEworkSpace\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\2102910030.index
+\TestProject\src
+D:\javaEEworkSpace\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\1436253339.index
+\LoginProjet\src
+D:\javaEEworkSpace\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\3873451325.index
+\projet bean\src
+D:\javaEEworkSpace\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\1925423125.index
+\premier projet\src
+D:\javaEEworkSpace\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\2858219642.index
+\InscriptionStagiaire\src
+D:\javaEEworkSpace\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\4265652081.index
+\Espace Stagiaire\src
+D:\javaEEworkSpace\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\1395812815.index
+\ProjetJSTL\src
+D:\javaEEworkSpace\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\1620352114.index
+\TestProject\src
+D:\javaEEworkSpace\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\3362055144.index
+\Espace Stagiaire\src
+D:\javaEEworkSpace\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\3468456689.index
+\ProjetJSTL\src

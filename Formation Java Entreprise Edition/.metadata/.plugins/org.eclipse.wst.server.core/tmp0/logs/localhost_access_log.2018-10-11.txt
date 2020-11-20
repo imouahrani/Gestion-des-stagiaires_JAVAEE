@@ -1,0 +1,2 @@
+127.0.0.1 - - [11/Oct/2018:22:17:52 +0200] "GET / HTTP/1.1" 404 962
+127.0.0.1 - - [11/Oct/2018:22:18:04 +0200] "GET /LoginProjet/FormulaireInscription.jsp HTTP/1.1" 200 2387

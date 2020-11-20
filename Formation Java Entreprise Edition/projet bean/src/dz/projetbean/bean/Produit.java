@@ -1,0 +1,44 @@
+package dz.projetbean.bean;
+
+public class Produit {
+	
+	private String intitule, categorie;
+	private float prix;
+	private int quantite;
+	public Produit(String intitule, String categorie, float prix, int quantite) {
+		super();
+		this.intitule = intitule;
+		this.categorie = categorie;
+		this.prix = prix;
+		this.quantite = quantite;
+	}
+	public Produit() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+	public String getIntitule() {
+		return intitule;
+	}
+	public void setIntitule(String intitule) {
+		this.intitule = intitule;
+	}
+	public String getCategorie() {
+		return categorie;
+	}
+	public void setCategorie(String categorie) {
+		this.categorie = categorie;
+	}
+	public float getPrix() {
+		return prix;
+	}
+	public void setPrix(float prix) {
+		this.prix = prix;
+	}
+	public int getQuantite() {
+		return quantite;
+	}
+	public void setQuantite(int quantite) {
+		this.quantite = quantite;
+	}
+	
+}

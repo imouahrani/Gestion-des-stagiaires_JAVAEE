@@ -1,0 +1,156 @@
+<%@page import="dz.espacestagiaire.bean.Stagiaire"%>
+<%@page import="dz.espacestagiaire.servlet.TraiteStagiaire"%>
+<%@page import="java.util.List"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<html lang="en">
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+<title>Bootstrap 101 Template</title>
+
+<!-- Bootstrap -->
+<link href="Assets/css/bootstrap.min.css" rel="stylesheet">
+<link href="Assets/css/extable.css" rel="stylesheet">
+<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+<!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+	<br>
+	<br>
+	<div class="container">
+		<div class="row">
+			<div class="col-md-4">
+				<div class="text-center">
+					<p>
+						<img src="Images/add-user.png">
+					</p>
+				</div>
+				<div class="jumbotron">
+					<h4>Veuillez renseigner les champs :</h4>
+					<form action="TraiteAjout" method="post">
+						<p>
+							Nom :<input type="text" name="nomstg" />
+						</p>
+						<p>
+							Prénom :<input type="text" name="prenomstg" />
+						</p>
+						<p>
+							Niveau :<select name="niveau">
+								<option>L1</option>
+								<option>L2</option>
+								<option>L3</option>
+								<option>M1</option>
+								<option>M2</option>
+							</select>
+						</p>
+						<p>
+							Langage :<select name="langage">
+								<option>Java</option>
+								<option>Android</option>
+								<option>Java EE</option>
+							</select>
+						</p>
+						<input type="submit" value="Ajouter" name="ajouter" />
+					</form>
+
+				</div>
+			</div>
+			<div class="col-md-8">
+				<br> <br> <br>
+				<form action="TraiteRecherche" method="post">
+					<label>Saisir l'identifiant : </label> <input type="number"
+						name="recherche" />
+					<button class="btn-lg btn-primary btn-block" type="submit"
+						name="rechercher" value="rechercher">Recherche</button>
+					<table>
+						<thead>
+							<tr>
+								<th>Id</th>
+								<th>Nom</th>
+								<th>Prénom</th>
+								<th>Niveau</th>
+								<th>Langage</th>
+								<th>Opération</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<%
+									Stagiaire stg = (Stagiaire) request.getAttribute("i");
+								%>
+								<td>${i.idstg }</td>
+								<td>${i.nomstg }</td>
+								<td>${i.prenomstg }</td>
+								<td>${i.niveau }</td>
+								<td>${i.langage }</td>
+
+
+								<td>
+
+									<form action="TraiteRecherche" method="post">
+
+										<input type="hidden" name="idstg" value="${i.idstg }">
+										<input type="hidden" name="supprimer" value="supprimer">
+
+
+
+
+
+									</form> <input type="submit" name="supprimer" value="Supprimer" />
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</form>
+
+				<div class="jumbotron">
+					<h4>Modification des champs :</h4>
+					<form action="TraiteRecherche" method="post">
+						<label>Nom:</label> <input type="text" name="nomstg"> <label>Prénom:</label>
+						<input type="text" name="prenomstg"> 
+						
+						
+						<label>Niveau:</label>
+						<select name ="niveau"> 
+						<option>l1</option>
+						<option>l2</option>
+						<option>l3</option>
+						<option>m1</option>
+						<option>m2</option>
+						
+						
+						
+						
+						
+						</select>
+						
+						
+						<input type="text" name="niveau"> <label>Langage:</label>
+						<input type="text" name="langage">
+
+
+
+
+					</form>
+
+
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+	<script
+		src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	<!-- Include all compiled plugins (below), or include individual files as needed -->
+	<script src="Assets/js/bootstrap.min.js"></script>
+</body>
+</html>

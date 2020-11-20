@@ -1,0 +1,9 @@
+package dz.TestProject.bean;
+
+public class Stagiaire {
+	
+	String nom, prenom, sexe, niveau;
+	float note1, note2;
+	Formation f;
+
+}

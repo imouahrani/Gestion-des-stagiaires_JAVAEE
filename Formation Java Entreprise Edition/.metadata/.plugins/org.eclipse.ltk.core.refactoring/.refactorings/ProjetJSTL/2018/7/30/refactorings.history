@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy 2 elements to &apos;lib&apos;&#x0D;&#x0A;- Original project: &apos;ProjetJSTL&apos;&#x0D;&#x0A;- Destination element: &apos;lib&apos;&#x0D;&#x0A;- Original elements:&#x0D;&#x0A;     taglibs-standard-spec-1.2.5.jar&#x0D;&#x0A;     taglibs-standard-impl-1.2.5.jar" description="Copy files" element1="WebContent/WEB-INF/lib/taglibs-standard-spec-1.2.5.jar" element2="WebContent/WEB-INF/lib/taglibs-standard-impl-1.2.5.jar" files="2" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1532509687259" target="/Espace Stagiaire/WebContent/WEB-INF/lib" units="0" version="1.0"/>
+</session>

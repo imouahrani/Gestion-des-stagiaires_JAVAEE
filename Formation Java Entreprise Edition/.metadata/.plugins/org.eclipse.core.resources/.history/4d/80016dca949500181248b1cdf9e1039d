@@ -1,0 +1,50 @@
+package dz.premierprojet.servlet;
+
+import java.io.IOException;
+import java.io.PrintWriter;
+
+import javax.servlet.ServletException;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+public class TraiteFormulaire extends HttpServlet {
+	@Override
+	protected void doGet(HttpServletRequest req, HttpServletResponse resp)
+			throws ServletException, IOException {
+		String nom = req.getParameter("nom");
+		String prenom = req.getParameter("prenom");
+		String sexe = req.getParameter("sexe");
+		String niveau = req.getParameter("niveau");
+		String[] formations = req.getParameterValues("formation");
+		float note1 = Float.parseFloat(req.getParameter("note1"));
+		float note2 = Float.parseFloat(req.getParameter("note2"));
+
+		float moy = (note1 + note2) / 2;
+
+		PrintWriter pw = resp.getWriter();
+		pw.println("Bienvenue" + " " + nom + " " + prenom
+				+ "<br>Vous êtes de sexe: " + sexe
+				+ "<br>Vous êtes de niveau: " + niveau + "<br>Et de formation");
+
+		for (int i = 0; i < formations.length; i++) {
+
+			pw.println(formations[i]);
+		}
+
+		if (moy < 10.0)
+			pw.println("<br>Vous avez " + moy
+					+ " de moyenne. Vous êtes ajourné(e)");
+		else
+			pw.println("<br>Vous avez " + moy
+					+ " de moyenne. Bravo vous êtes admis(e)!");
+
+	}
+
+	@Override
+	protected void doPost(HttpServletRequest req, HttpServletResponse resp)
+			throws ServletException, IOException {
+		doGet(req, resp);
+
+	}
+}

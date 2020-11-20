@@ -1,0 +1,39 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
+	<%@ page import="dz.inscriptionstagiaire.bean.Stagiaire" %>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+<b style="color: green;">
+
+	<%
+		
+		String message = (String) request.getAttribute("msg");
+		out.println(message);
+	%>
+</b><br><br>
+
+<%= "Bienvenu:" %><br>
+<%
+Stagiaire st = (Stagiaire)request.getAttribute("Stagiaire");
+
+%>
+<%="Nom:" %>
+${Stagiaire.nom} <br>
+<%="Prénom:" %>
+${Stagiaire.prenom} <br>
+<%="Numéro de tel:" %>
+${Stagiaire.numtel} <br>
+<%="email:" %>
+${Stagiaire.email} <br>
+
+
+
+
+</body>
+</html>

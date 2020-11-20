@@ -1,0 +1,97 @@
+package dz.espacestagiaire.modele;
+
+import dz.espacestagiaire.bean.Stagiaire;
+import java.sql.*;
+
+public class MajStagiaire {
+	Connecter connect = new Connecter();
+	PreparedStatement stat;
+	Statement sta;
+
+	public void AjoutStg(Stagiaire stg) {
+
+		String s = "insert into stagiaire(nomstg,prenomstg,niveau,langage) values(?,?,?,?)";
+		try {
+			stat = connect.connecterbase().prepareStatement(s);
+			stat.setString(1, stg.getNomstg());
+			stat.setString(2, stg.getPrenomstg());
+			stat.setString(3, stg.getNiveau());
+			stat.setString(4, stg.getLangage());
+			stat.execute();
+			System.out.println("ajout réussi");
+		} catch (SQLException e) {
+			e.printStackTrace();
+			System.err.println("échec d'insertion");
+		}
+
+	}
+
+	// supprission d'un stagiaire
+	public void SupprimerStg(int idstgg) {
+		try {
+			sta = connect.connecterbase().createStatement();
+			sta.executeUpdate("delete from stagiaire where idstg='" + idstgg
+					+ "'");
+			System.out.println("Supprission réussie!");
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+			System.err.println("Echec de supprission" + e.getMessage());
+		}
+	}
+
+	public Stagiaire RechercherStg(int idstgs) {
+		Stagiaire stg = new Stagiaire();
+		try {
+			sta = connect.connecterbase().createStatement();
+			ResultSet res = sta
+					.executeQuery("select * from stagiaire where idstg='"
+							+ idstgs + "'");
+
+			while (res.next()) {
+				stg.setIdstg(res.getInt("idstg"));
+
+				stg.setNomstg(res.getString("nomstg"));
+				stg.setPrenomstg(res.getString("prenomstg"));
+				stg.setNiveau(res.getString("niveau"));
+				stg.setLangage(res.getString("langage"));
+
+			}
+
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return stg;
+
+	}
+
+	public void modifierStagiaire(int id, Stagiaire stg) {
+		try {
+			sta = connect.connecterbase().createStatement();
+			sta.executeUpdate("update stagiaire set nom = '" + stg.getNomstg()
+					+ "',prenom ='" + stg.getPrenomstg() + "',niveau ='"
+					+ stg.getNiveau() + "',langage ='" + stg.getLangage()
+					+ "' where id ='" + idstg+"'");
+			System.out.println("modif reussie !");
+
+		} catch (Exception e) {
+			System.err.println("echec !"+e.getMessage());
+		}
+
+	}
+
+	public static void main(String[] args) {
+
+		MajStagiaire m = new MajStagiaire();
+		Stagiaire stg = new Stagiaire();
+		stg.setNomstg("imene") ;
+		stg.setPrenomstg("imene");
+		stg.setNiveau("l2");
+		stg.setLangage("java");
+		MajStagiaire ms = new MajStagiaire();
+		ms.modifierStagiaire(12, stg);
+		
+	
+	}
+}

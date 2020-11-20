@@ -1,0 +1,7 @@
+package dz.LoginProjet.bean;
+
+public class Inscription {
+	String civilite, nom, prenom, tel, domaine, question, matin, aprem;
+	
+
+}

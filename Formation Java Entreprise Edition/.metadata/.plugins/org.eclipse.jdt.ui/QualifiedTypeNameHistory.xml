@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+<fullyQualifiedTypeName name="com.sun.org.apache.xpath.internal.operations.String"/>
+<fullyQualifiedTypeName name="dz.projetben.ben.Produit"/>
+<fullyQualifiedTypeName name="java.lang.Class"/>
+<fullyQualifiedTypeName name="java.sql.DriverManager"/>
+<fullyQualifiedTypeName name="java.util.ArrayList"/>
+<fullyQualifiedTypeName name="com.mysql.jdbc.Statement"/>
+<fullyQualifiedTypeName name="dz.espacestagiaire.servlet.TraiteUtilisateur"/>
+<fullyQualifiedTypeName name="java.awt.List"/>
+<fullyQualifiedTypeName name="jdk.nashorn.internal.ir.BreakableNode"/>
+<fullyQualifiedTypeName name="java.util.concurrent.RecursiveAction"/>
+<fullyQualifiedTypeName name="dz.espacestagiaire.bean.Utilisateur"/>
+<fullyQualifiedTypeName name="dz.espacestagiaire.modele.RecupererUtilisateur"/>
+<fullyQualifiedTypeName name="dz.espacestagiaire.modele.RecupererStagiaire"/>
+<fullyQualifiedTypeName name="java.util.List"/>
+<fullyQualifiedTypeName name="dz.espacestagiaire.modele.Connecter"/>
+<fullyQualifiedTypeName name="java.sql.PreparedStatement"/>
+<fullyQualifiedTypeName name="dz.espacestagiaire.servlet.TraiteAjout"/>
+<fullyQualifiedTypeName name="java.lang.System"/>
+<fullyQualifiedTypeName name="dz.espacestagiaire.modele.MajStagiaire"/>
+<fullyQualifiedTypeName name="com.mysql.jdbc.PreparedStatement"/>
+<fullyQualifiedTypeName name="java.sql.Connection"/>
+<fullyQualifiedTypeName name="dz.espacestagiaire.bean.Stagiaire"/>
+<fullyQualifiedTypeName name="java.sql.Statement"/>
+<fullyQualifiedTypeName name="com.sun.corba.se.spi.orbutil.fsm.Guard.Result"/>
+<fullyQualifiedTypeName name="java.sql.ResultSet"/>
+<fullyQualifiedTypeName name="java.sql.SQLException"/>
+<fullyQualifiedTypeName name="java.lang.Integer"/>
+<fullyQualifiedTypeName name="dz.TestInscripStagiaire.bean.Stagiaire"/>
+<fullyQualifiedTypeName name="dz.TestInscripStagiaire.bean.Formation"/>
+<fullyQualifiedTypeName name="dz.TestProject.bean.Formation"/>
+<fullyQualifiedTypeName name="java.lang.Float"/>
+<fullyQualifiedTypeName name="java.io.PrintWriter"/>
+<fullyQualifiedTypeName name="java.lang.String"/>
+<fullyQualifiedTypeName name="javax.servlet.http.HttpServlet"/>
+</qualifiedTypeNameHistroy>

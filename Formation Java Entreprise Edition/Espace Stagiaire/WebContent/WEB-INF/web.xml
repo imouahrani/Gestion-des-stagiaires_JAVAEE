@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd" id="WebApp_ID" version="3.0">
+  <display-name>Espace Stagiaire</display-name>
+  <servlet>
+    <servlet-name>TraiteUtilisateur</servlet-name>
+    <servlet-class>dz.espacestagiaire.servlet.TraiteUtilisateur</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>TraiteUtilisateur</servlet-name>
+    <url-pattern>/TraiteUtilisateur</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>TraiteStagiaire</servlet-name>
+    <servlet-class>dz.espacestagiaire.servlet.TraiteStagiaire</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>TraiteStagiaire</servlet-name>
+    <url-pattern>/TraiteStagiaire</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>TraiteAjout</servlet-name>
+    <servlet-class>dz.espacestagiaire.servlet.TraiteAjout</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>TraiteAjout</servlet-name>
+    <url-pattern>/TraiteAjout</url-pattern>
+  </servlet-mapping>
+  
+  
+   <servlet>
+    <servlet-name>TraiteRecherche</servlet-name>
+    <servlet-class>dz.espacestagiaire.servlet.TraiteRecherche</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>TraiteRecherche</servlet-name>
+    <url-pattern>/TraiteRecherche</url-pattern>
+  </servlet-mapping>
+</web-app>

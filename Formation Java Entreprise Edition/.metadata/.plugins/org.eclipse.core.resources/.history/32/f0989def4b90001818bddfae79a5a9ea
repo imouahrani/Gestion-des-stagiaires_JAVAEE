@@ -1,0 +1,65 @@
+package dz.espacestagiaire.modele;
+
+import dz.espacestagiaire.bean.Stagiaire;
+import java.sql.*;
+
+public class MajStagiaire {
+	Connecter connect = new Connecter();
+	PreparedStatement stat;
+	public void AjoutStg(Stagiaire stg) {
+		
+		String s = "insert into stagiaire(nomstg,prenomstg,niveau,langage) values(?,?,?,?)";
+		try {
+			stat = connect.connecterbase().prepareStatement(s);
+			stat.setString(1, stg.getNomstg());
+			stat.setString(2, stg.getPrenomstg());
+			stat.setString(3, stg.getNiveau());
+			stat.setString(4, stg.getLangage());
+			stat.execute();
+			System.out.println("ajout réussi");
+		} catch (SQLException e) {
+			e.printStackTrace();
+			System.err.println("échec d'insertion");
+		}
+
+	}
+//supprission d'un stagiaire
+	public void SupprimerStg(int idstg){
+	try {
+		Statement	stat=connect.connecterbase().createStatement();
+		stat.executeUpdate("delete from stagiaire where idstg='"+idstg+"'");
+		System.out.println("supprissiob réusie");
+	} catch (SQLException e) {
+		// TODO Auto-generated catch block
+		e.printStackTrace();
+		System.err.println("échec de supprission"+e.getMessage());
+	}}
+	public Stagiaire RechercherStg(int id){
+		Stagiaire stg=new Stagiaire();
+		try {
+			Statement sta=connect.connecterbase().createStatement();
+			ResultSet res=sta.executeQuery("select * from stagiaire where idstg='"+id+"'");
+			
+			while (res.next()) {
+				stg.setNomstg(res.getString("nomstg"));
+				stg.setPrenomstg(res.getString("prenomstg"));
+				stg.setNiveau(res.getString("niveau"));
+				stg.setLangage(res.getString("langage"));
+				
+			}
+			
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return stg;
+	
+	}
+
+	public static void main(String[] args) {
+		
+		
+		MajStagiaire m = new MajStagiaire();
+		m.SupprimerStg(9);
+	}
+}

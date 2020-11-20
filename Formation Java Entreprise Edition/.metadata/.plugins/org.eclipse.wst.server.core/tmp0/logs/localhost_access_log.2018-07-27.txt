@@ -1,0 +1,2 @@
+127.0.0.1 - - [27/Jul/2018:21:17:39 +0200] "GET / HTTP/1.1" 404 962
+127.0.0.1 - - [27/Jul/2018:21:17:41 +0200] "GET /premier_projet/PremiereServelet HTTP/1.1" 200 156

@@ -1,0 +1,123 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Formation</title>
+</head>
+<body>
+	<h3>Les informations</h3>
+	<form action="TrairteFormation" method="post">
+		<table>
+			<tr>
+				<td>
+					<table>
+
+						<caption>Info stagiaire</caption>
+
+
+
+						<tr>
+
+							<td>Nom:</td>
+							<td><input type="text" name="nom"></td>
+
+
+						</tr>
+						<tr>
+
+							<td>prénom:</td>
+							<td><input type="text" name="prenom"></td>
+
+
+						</tr>
+						<tr>
+							<td>N° de téléphone:</td>
+							<td><input type="text" name="numtel"></td>
+
+
+						</tr>
+						<tr>
+							<td>Email:</td>
+							<td><input type="text" name="email"></td>
+
+
+
+						</tr>
+
+
+
+
+
+					</table>
+				</td>
+				<td>
+					<table>
+
+						<caption>Info Formation</caption>
+						<tr>
+
+							<td>Intitulé:</td>
+							<td><input type="text" name="intitule"></td>
+
+
+						</tr>
+						<tr>
+
+							<td>Prix:</td>
+							<td><input type="text" name="prix"></td>
+
+
+						</tr>
+
+						<tr>
+
+							<td>La durée:</td>
+							<td><input type="radio" name="duree" value="30h">
+								30h</td>
+							<td><input type="radio" name="duree" value="50h">
+								50h</td>
+
+
+
+
+						</tr>
+
+
+						<tr>
+							<td>Formule:</td>
+
+
+							<td><select name="formule">
+
+									<option>Journée</option>
+									<option>Soir</option>
+									<option>Weekend</option>
+
+							</select></td>
+
+						</tr>
+
+
+
+
+
+					</table>
+				</td>
+			</tr>
+		</table>
+	</form>
+	<b style="color: red;"> <%
+ 	String message = (String) request.getAttribute("m");
+ 	if (message != null) {
+
+ 		out.println(message);
+ 	}
+ %>
+	</b><br>
+	<input type="submit" value="envoyer">
+
+
+</body>
+</html>

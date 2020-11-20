@@ -1,0 +1,86 @@
+package dz.espacestagiaire.modele;
+
+import dz.espacestagiaire.bean.*;
+
+import java.sql.*;
+
+
+public class MajStagiaire {
+	Connecter connect = new Connecter();
+	PreparedStatement stat;
+
+	public void ajoutStg(Stagiaire stg) {
+
+		String s = "insert into stagiaire(nomstg, prenomstg, niveau, langage)values(?,?,?,?)";
+
+		try {
+			stat = connect.connecterbase().prepareStatement(s);
+			stat.setString(1, stg.getNomstg());
+			stat.setString(2, stg.getPrenomstg());
+			stat.setString(3, stg.getNiveau());
+			stat.setString(4, stg.getLangage());
+			stat.execute();
+			System.out.println(" ajout reussi");
+
+		} catch (SQLException e) {
+			e.printStackTrace();
+			System.err.println("erreur d ajout");
+
+		}
+
+	}
+
+	// supp dun stagiaire
+
+	public void SupprimerStagiaire(int idstg) {
+		try {
+			Statement stat = connect.connecterbase().createStatement();
+			stat.executeUpdate("delete from stagiaire where idstg =" + " "
+					+ idstg);
+
+			System.out.println("sup reussi");
+
+		} catch (SQLException e) {
+			e.printStackTrace();
+			System.err.println("erreur de sup");
+		}
+
+	}
+
+	public Stagiaire RechercheStg(int id) {
+		Stagiaire stg = new Stagiaire();
+		try {
+			Statement sta = connect.connecterbase().createStatement();
+			ResultSet res = sta
+					.executeQuery("select * from stagiaire where idstg=" + idstg
+							+ "");
+			while (res.next()) {
+				
+				stg.setNomstg(res.getString("nomstg"));
+				stg.setPrenomstg(res.getString("prenomstg"));
+				stg.setNiveau(res.getString("niveau"));
+				stg.setLangage(res.getString("langage"));
+
+
+
+				
+			}
+
+		} catch (SQLException e) {
+e.printStackTrace();		}
+		return stg;
+	}
+
+	public static void main(String[] args) {
+		Stagiaire stg = new Stagiaire();
+		stg.setNomstg("ouahrani");
+		stg.setPrenomstg("rafik");
+		stg.setNiveau("13");
+		stg.setLangage("java");
+		MajStagiaire st = new MajStagiaire();
+		st.ajoutStg(stg);
+		MajStagiaire m = new MajStagiaire();
+		m.ajoutStg(stg);
+
+	}
+}

@@ -1,0 +1,11 @@
+package dz.TestInscripStagiaire.servlet;
+
+import javax.servlet.http.HttpServlet;
+
+public class TraiteFormation extends HttpServlet {
+
+	
+	
+	
+	
+}

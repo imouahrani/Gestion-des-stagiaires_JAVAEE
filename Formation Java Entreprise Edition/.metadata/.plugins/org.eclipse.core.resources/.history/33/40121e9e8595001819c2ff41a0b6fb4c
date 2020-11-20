@@ -1,0 +1,93 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+<b style="color: red">
+<%
+	String message = (String) request.getAttribute("m");
+	if(message != null)
+		out.println(message);
+
+%>
+</b>
+<h1>Les informations</h1>
+
+<form action="TriteFormation" method="post">
+<table>
+<tr>
+<td>
+<h4>Info formation</h4>
+
+
+
+
+
+
+
+
+
+</td>
+<td>
+<h4>Info stagiaire</h4>
+
+
+
+
+
+
+</td>
+
+
+
+
+
+
+
+
+
+
+
+
+
+</tr>
+
+
+
+
+
+
+
+
+
+
+
+</table>
+
+
+
+
+
+
+</form>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

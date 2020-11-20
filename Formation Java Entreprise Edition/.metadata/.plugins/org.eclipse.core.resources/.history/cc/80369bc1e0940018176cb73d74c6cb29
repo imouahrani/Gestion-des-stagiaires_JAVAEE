@@ -1,0 +1,8 @@
+package dz.TestInscripStagiaire.bean;
+
+public class Formation {
+	
+	private String intitule, duree, formule;
+	private float prix;
+
+}

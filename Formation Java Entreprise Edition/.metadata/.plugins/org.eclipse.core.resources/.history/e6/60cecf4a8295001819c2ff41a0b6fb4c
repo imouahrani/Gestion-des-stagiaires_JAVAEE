@@ -1,0 +1,16 @@
+package dz.TestProject.servlet;
+
+import javax.servlet.http.HttpServlet;
+
+public class TraiteStagiaire extends HttpServlet {
+
+	
+	String nom = req.getParameter("nom");
+	String prenom = req.getParameter("prenom");
+	String sexe = req.getParameter("sexe");
+	String niveau = req.getParameter("niveau");
+	String formation = req.getParameter("formation");
+	float note1 = Float.parseFloat(req.getParameter("note1"));
+	float note2 = Float.parseFloat(req.getParameter("note2"));
+
+}

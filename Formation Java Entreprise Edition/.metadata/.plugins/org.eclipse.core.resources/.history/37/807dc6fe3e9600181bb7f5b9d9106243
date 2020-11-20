@@ -1,0 +1,28 @@
+package dz.LoginProjet.bean;
+
+public class Inscription {
+	String civilite, nom, prenom, tel, domaine, question, matin, aprem;
+
+	public Inscription() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+
+	public Inscription(String civilite, String nom, String prenom, String tel,
+			String domaine, String question1,String question2, String matin, String aprem) {
+		super();
+		this.civilite = civilite;
+		this.nom = nom;
+		this.prenom = prenom;
+		this.tel = tel;
+		this.domaine = domaine;
+		this.question = question1;
+
+		this.matin = matin;
+		this.aprem = aprem;
+	}
+
+	
+	
+
+}

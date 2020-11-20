@@ -1,0 +1,7 @@
+package dz.TestInscripStagiaire.bean;
+
+public class Stagiaire {
+	
+	private String nom, prenom, numTel, email;
+
+}

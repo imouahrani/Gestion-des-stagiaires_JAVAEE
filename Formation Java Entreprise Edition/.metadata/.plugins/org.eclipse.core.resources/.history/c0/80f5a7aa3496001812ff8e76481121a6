@@ -1,0 +1,67 @@
+package dz.LoginProjet.servlet;
+
+import java.io.IOException;
+
+import javax.servlet.ServletException;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import dz.LoginProjet.bean.*;
+
+public class TraiteInscription extends HttpServlet {
+
+	@Override
+	protected void doGet(HttpServletRequest req, HttpServletResponse resp)
+			throws ServletException, IOException {
+
+		String civilite = req.getParameter("civilite");
+		String nom = req.getParameter("nom");
+		String prenom = req.getParameter("prenom");
+		String tel = req.getParameter("tel");
+		String domaine = req.getParameter("domaine");
+		String question = req.getParameter("question");
+		String matin = req.getParameter("matin");
+		String aprem = req.getParameter("aprem");
+
+		String message = "";
+		if (civilite.trim().isEmpty() || nom.trim().isEmpty()
+				|| prenom.trim().isEmpty() || tel.trim().isEmpty()
+				|| domaine.trim().isEmpty() || question.trim().isEmpty()
+				|| matin.trim().isEmpty() || aprem.trim().isEmpty()) {
+
+			message = "Vous devez renseigner tous les champs";
+			req.setAttribute("m", message);
+			this.getServletContext()
+					.getRequestDispatcher("/FormulaireInscription.jsp")
+					.forward(req, resp);
+
+		} else {
+
+			message = "Votre demande a été bien traitée";
+			req.setAttribute("m", message);
+			Inscription s = new Inscription();
+			s.setCivilite(civilite);
+			s.setNom(nom);
+			s.setPrenom(prenom);
+			s.setTel(tel);
+			s.setDomaine(domaine);
+			s.setQuestion(question);
+			s.setMatin(matin);
+			s.setAprem(aprem);
+
+			this.getServletContext()
+					.getRequestDispatcher("/WEB-INF/Accueil.jsp")
+					.forward(req, resp);
+
+		}
+
+	}
+	
+	
+	
+	@Override
+	protected void doPost(HttpServletRequest req, HttpServletResponse resp)
+			throws ServletException, IOException {
+		doGet(req, resp);
+	}
+}

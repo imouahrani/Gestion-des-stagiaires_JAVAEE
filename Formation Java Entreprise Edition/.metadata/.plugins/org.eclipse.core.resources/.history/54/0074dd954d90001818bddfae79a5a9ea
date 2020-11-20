@@ -1,0 +1,32 @@
+package dz.espacestagiaire.servlet;
+import dz.espacestagiaire.bean.*;
+import dz.espacestagiaire.servlet.*;
+import dz.espacestagiaire.modele.*;
+
+import java.io.IOException;
+
+import javax.servlet.ServletException;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import dz.espacestagiaire.bean.Stagiaire;
+import dz.espacestagiaire.modele.MajStagiaire;
+
+public class TraiteRecherche extends HttpServlet{
+@Override
+protected void doGet(HttpServletRequest req, HttpServletResponse resp)
+		throws ServletException, IOException {
+	int id=Integer.parseInt(req.getParameter("rechercher"));
+	MajStagiaire ms=new MajStagiaire();
+	Stagiaire stg=ms.RechercherStg(id);
+	req.setAttribute("i", stg);
+	this.getServletContext().getRequestDispatcher("/AjoutStagiaire.jsp").forward(req, resp);
+	
+}
+@Override
+	protected void doPost(HttpServletRequest req, HttpServletResponse resp)
+			throws ServletException, IOException {
+		doGet(req, resp);
+	}
+}

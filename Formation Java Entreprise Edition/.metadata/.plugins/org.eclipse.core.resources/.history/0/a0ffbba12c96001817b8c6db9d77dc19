@@ -1,0 +1,5 @@
+package dz.LoginProjet.bean;
+
+public class Inscription {
+
+}

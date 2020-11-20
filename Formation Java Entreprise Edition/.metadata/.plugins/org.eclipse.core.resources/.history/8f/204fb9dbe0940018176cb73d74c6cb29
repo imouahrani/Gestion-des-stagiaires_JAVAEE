@@ -1,0 +1,5 @@
+package dz.TestInscripStagiaire.bean;
+
+public class Stagiaire {
+
+}
